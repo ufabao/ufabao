@@ -8,15 +8,19 @@ ii: $\|\alpha x\|$ $\leqslant$ $|\alpha|$ $\|x\|$ , for any $\alpha$ $\in$ $C$ \
 
 iii: $\|x\|$ = 0 implies x = 0 \n
 </blockquote>
-We call this function a norm, hopefully you're familiar with the $R^2$ norm,
+We call this function a <b>norm</b>, hopefully you're familiar with the $R^2$ norm,
 $\|(x_1, x_2)\|$ = $\sqrt{x_1^2 + x_2^2}$. It is a very useful thing to know (however I will not prove it) that any function that satisfies the three properties above is a scalar multiple of this norm; or in mathematical terminology: all norms are equivalent on $R^2$
 
-This norm can be used to define a metric on X by letting $\rho$(x, y) = $\|x - y\|$. Let's say that $X$ is the space $L^2$; the space of all real f such that $\int$ $|f|^2$dx < $\infty$, where dx represents the Lebesgue measure on $R$. We can define a norm on this space:
+This norm can be used to define a metric on X by letting $\rho(x, y)$ = $\|x - y\|$. Let's say that $X$ is the space $L^2$; the space of all real valued function whose square is integrable with resepect to Lebesgue measure:
 
-$\|f\|$ = {$\int$ $|f|^2$dx}$^\frac{1}{2}$ 
+$L^2$ = $\left\{\: f \colon R \to R \: | \: \int f^2 dx < \infty \right\}$
+
+We can define a norm on this space:
+
+$\|f\|$ = $\sqrt{\int f^2dx}$
 This norm gives rise to the metric:
 
-$\rho$(f, g) = $\|f - g\|$ = {$\int$$|f - g|^2$dx}$^\frac{1}{2}$
+$\rho(f, g)$ = $\|f - g\|$ = $\sqrt{\int|f - g|^2dx}$
 Since we're working with Lebesgue's definition of the integral it can easily be shown that this space is complete with respect to this metric! This $L^2$ is now officially a Banach space, and we're basically just starting. We can use only the completeness feature to prove something incredibly powerful:
 
 <blockquote>Baire's (Category) Theorem: The intersection of any countable collection of dense open sets in a complete metric space, is a dense set</blockquote>
