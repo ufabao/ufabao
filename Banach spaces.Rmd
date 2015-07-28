@@ -1,13 +1,13 @@
 As you may or may not know depending on whether you have talked about mathematics with me lately; I have recently taken a great interest in functional analysis. The main reason for this is that I love the ability to approach a subject from different perspectives, and from my (limited) experience with functional analysis it is possible to approach the subject algebraically and analytically. Let me give an example:
 
 We start with $X$ which is a vector space over $C$, so we already have a pretty nice structure to exploit, and we continue by defining a function, written $\|*\|$ $\colon$ $X$ $\to$ $R$ that satisfies:
-
+<blockquote>
 i: $\|x + y\|$ $\leqslant$ $\|x\|$ + $\|y\|$ , for all x, y $\in$ $X$ This is the so called triangle inequality \n
 
 ii: $\|\alpha x\|$ $\leqslant$ $|\alpha|$ $\|x\|$ , for any $\alpha$ $\in$ $C$ \n
 
 iii: $\|x\|$ = 0 implies x = 0 \n
-
+</blockquote>
 We call this function a norm, hopefully you're familiar with the $R^2$ norm,
 $\|(x_1, x_2)\|$ = $\sqrt{x_1^2 + x_2^2}$. It is a very useful thing to know (however I will not prove it) that any function that satisfies the three properties above is a scalar multiple of this norm; or in mathematical terminology: all norms are equivalent on $R^2$
 
@@ -19,7 +19,7 @@ This norm gives rise to the metric:
 $\rho$(f, g) = $\|f - g\|$ = {$\int$$|f - g|^2$dx}$^\frac{1}{2}$
 Since we're working with Lebesgue's definition of the integral it can easily be shown that this space is complete with respect to this metric! This $L^2$ is now officially a Banach space, and we're basically just starting. We can use only the completeness feature to prove something incredibly powerful:
 
-Baire's (Category) Theorem: The intersection of any countable collection of dense open sets in a complete metric space, is a dense set
+<blockquote>Baire's (Category) Theorem: The intersection of any countable collection of dense open sets in a complete metric space, is a dense set</blockquote>
 
 I'll show you what this implies soon, but first lets consider how we could prove something like this. Start with a dense open set, and choose a an arbitrary interval in $X$, if we can show that some point in this interval is contained in the intersection of all of our dense sets then we have the proof. We intersect this interval with our first open dense set, $V_1$, and given that $V_1$ is dense the intersection is non-empty. We can continue doing this for any finite collection of $V_n$'s (this is an easy induction proof), but think about what we have; a monotone decreasing sequence in a complete metric space, we can use this fact to prove that a countable sequence of such intersections will converge.
 
@@ -28,8 +28,8 @@ Baire's theorem immediately gives rise to one of the fundamental Banach space th
 $\|\Lambda \|$ = sup$\left\{\frac{\|\Lambda x\|}{\|x\|} \right\}$ 
 
 We can also define a <b><i>bounded</i></b> linear transformation in the obvious way by requiring that $\| \Lambda \|$ < $\infty$.
-Suppose we have a collection of these bounded linear transformations of X into Y:
-
+Suppose we have a collection of these bounded linear transformations of $X$ into $Y$:
+<blockquote>
 Uniform boundedness theorem: If {$\Lambda_\alpha$} is a collection of bounded linear transformations of $X$ into $Y$, with an index set A, then either:
 
 i: There is an M such that $\|\Lambda_\alpha\|$ ≤ M for every $\alpha$ $\in$ A, that is the $\Lambda_\alpha$'s are uniformly bounded (hence the name of the theorem)
@@ -37,7 +37,7 @@ i: There is an M such that $\|\Lambda_\alpha\|$ ≤ M for every $\alpha$ $\in$ A
 or
 
 ii: $sup_a$$\|\Lambda_\alpha x\|$ = $\infty$ for all x in a dense subset of $X$.
-
+</blockquote>
 This again feels like quite a powerful theorem, but turns out to be quite trivial to prove just by considering the sets $V_n$ = { x | $sup_a$$\|\Lambda_\alpha x\|$ > n}, the $V_n$'s are open as a consequence of norms being continuous, so we can consider two options:
 
 i: Any of the $V_n$'s fail to be dense: In this case we can use linearity to find an M that bounds all of our transformations
