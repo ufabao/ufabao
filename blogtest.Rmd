@@ -1,0 +1,6 @@
+---
+title: "blog post"
+output: html_document
+---
+
+$\int$ $|f|^2$
